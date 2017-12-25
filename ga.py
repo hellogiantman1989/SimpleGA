@@ -34,6 +34,7 @@ fit_mean = []		# 平均适应度
 # pop = [[0, 1, 0, 1, 0, 1, 0, 1, 0, 1] for i in range(pop_size)]
 pop = geneEncoding(pop_size, chrom_length)
 
+#不进行selection处理，直接交配和变异依然可以得到正确结果
 for i in range(pop_size):
 	obj_value = calobjValue(pop, chrom_length, max_value)        # 个体评价
 	fit_value = calfitValue(obj_value)      # 淘汰
